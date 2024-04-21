@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <h2>Add New Entity</h2>
+    <form action="#" th:action="@{/save}" th:object="${entity}" method="post">
+        <input type="text" th:field="*{name}" placeholder="Name"/><br/>
+        <input type="text" th:field="*{role}" placeholder="Role"/><br/>
+        <input type="text" th:field="*{salary}" placeholder="Salary"/><br/>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

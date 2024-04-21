@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List</title>
+</head>
+<body>
+    <h2>All Entities</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Salary</th>
+        </tr>
+        <tr th:each="entity : ${entities}">
+            <td th:text="${entity.id}"/>
+            <td th:text="${entity.name}"/>
+            <td th:text="${entity.role}"/>
+            <td th:text="${entity.salary}"/>
+        </tr>
+    </table>
+</body>
+</html>

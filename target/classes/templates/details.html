@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <h2>Entity Details</h2>
+    <p th:if="${entity}">
+        ID: <span th:text="${entity.id}"/><br/>
+        Name: <span th:text="${entity.name}"/><br/>
+        Role: <span th:text="${entity.role}"/><br/>
+        Salary: <span th:text="${entity.salary}"/><br/>
+    </p>
+    <p th:unless="${entity}">Entity not found!</p>
+</body>
+</html>
